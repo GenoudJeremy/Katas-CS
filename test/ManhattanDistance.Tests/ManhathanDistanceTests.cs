@@ -7,7 +7,7 @@ namespace ManhattanDistance.Tests
         {
             int expected = 0;
 
-            ManhathanDistance manhathanDistance = GetManhathanDistanceInstance(0,0,0,0); 
+            ManhathanDistanceCalculator manhathanDistance = GetManhathanDistanceInstance(0,0,0,0); 
 
             int result = manhathanDistance.GetDistance();
             Assert.Equal(expected, result);
@@ -17,7 +17,7 @@ namespace ManhattanDistance.Tests
         {
             int expected = 1;
 
-            ManhathanDistance manhathanDistance = GetManhathanDistanceInstance(1,0,0,0); 
+            ManhathanDistanceCalculator manhathanDistance = GetManhathanDistanceInstance(1,0,0,0); 
 
             int result = manhathanDistance.GetDistance();
             Assert.Equal(expected, result);
@@ -28,7 +28,7 @@ namespace ManhattanDistance.Tests
         {
             int expected = 1;
 
-            ManhathanDistance manhathanDistance = GetManhathanDistanceInstance(2,0,1,0); 
+            ManhathanDistanceCalculator manhathanDistance = GetManhathanDistanceInstance(2,0,1,0); 
 
             int result = manhathanDistance.GetDistance();
             Assert.Equal(expected, result);
@@ -39,7 +39,7 @@ namespace ManhattanDistance.Tests
         {
             int expected = 1;
 
-            ManhathanDistance manhathanDistance = GetManhathanDistanceInstance(0,1,0,0); 
+            ManhathanDistanceCalculator manhathanDistance = GetManhathanDistanceInstance(0,1,0,0); 
 
             int result = manhathanDistance.GetDistance();
             Assert.Equal(expected, result);
@@ -49,7 +49,7 @@ namespace ManhattanDistance.Tests
         {
             int expected = 1;
 
-            ManhathanDistance manhathanDistance = GetManhathanDistanceInstance(0,2,0,1); 
+            ManhathanDistanceCalculator manhathanDistance = GetManhathanDistanceInstance(0,2,0,1); 
 
             int result = manhathanDistance.GetDistance();
             Assert.Equal(expected, result);
@@ -60,7 +60,7 @@ namespace ManhattanDistance.Tests
         {
             int expected = 1;
 
-            ManhathanDistance manhathanDistance = GetManhathanDistanceInstance(0,1,0,2); 
+            ManhathanDistanceCalculator manhathanDistance = GetManhathanDistanceInstance(0,1,0,2); 
 
             int result = manhathanDistance.GetDistance();
             Assert.Equal(expected, result);
@@ -71,16 +71,16 @@ namespace ManhattanDistance.Tests
         {
             int expected = 1;
 
-            ManhathanDistance manhathanDistance = GetManhathanDistanceInstance(1,0,2,0); 
+            ManhathanDistanceCalculator manhathanDistance = GetManhathanDistanceInstance(1,0,2,0); 
 
             int result = manhathanDistance.GetDistance();
             Assert.Equal(expected, result);
         }
 
-        private ManhathanDistance GetManhathanDistanceInstance(int x1, int y1, int x2, int y2) {
+        private ManhathanDistanceCalculator GetManhathanDistanceInstance(int x1, int y1, int x2, int y2) {
             Point point1 = new Point(x1,y1);
             Point point2 = new Point(x2,y2);
-            return new ManhathanDistance(point1, point2);            
+            return new ManhathanDistanceCalculator(point1, point2);            
         }
     }
 }

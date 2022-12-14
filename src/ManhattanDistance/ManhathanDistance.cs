@@ -1,8 +1,8 @@
 namespace ManhattanDistance
 {
-    public class ManhathanDistance
+    public class ManhathanDistanceCalculator
     {
-        public ManhathanDistance(Point point1, Point point2)
+        public ManhathanDistanceCalculator(Point point1, Point point2)
         {
             Point1 = point1;
             Point2 = point2;
