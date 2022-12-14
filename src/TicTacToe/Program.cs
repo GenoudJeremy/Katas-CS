@@ -12,7 +12,7 @@ namespace TicTacToe
             GameEnded gameEnded = new GameEnded(grid);
             string winner = "";
             int count = 1;
-            while (!gameEnded.IsGameFinished() && count <= 9){
+            while (!gameEnded.IsThereAWinner() && count <= 9){
                 Console.WriteLine($"Player {grid.GetToken()} it's your turn - Turn {count}");
                 ConsoleWriteGrid(grid);
                 Console.WriteLine($"Provide Coordinate between 0,0 and 3,3 : ");
@@ -40,7 +40,7 @@ namespace TicTacToe
             }
             
             ConsoleWriteGrid(grid);
-            if (gameEnded.IsGameFinished()){
+            if (gameEnded.IsThereAWinner()){
                 
                 Console.WriteLine($"Winner is : {winner}");
             }

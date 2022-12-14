@@ -9,7 +9,7 @@ namespace TicTacToe
 
         public Grid Grid { get; }
 
-        public bool IsGameFinished()
+        public bool IsThereAWinner()
         {
             string?[,] cellsValue = Grid.GetGrid();
             /* Column condition win */

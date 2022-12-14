@@ -8,7 +8,7 @@ namespace TicTacToeTests
             Grid grid = new Grid();
             GameEnded gameEnded = new GameEnded(grid);
 
-            Boolean result = gameEnded.IsGameFinished();
+            Boolean result = gameEnded.IsThereAWinner();
             Assert.False(result);
         }
 
@@ -23,7 +23,7 @@ namespace TicTacToeTests
             grid.TakeCell(new int[2]{2,0});
             GameEnded gameEnded = new GameEnded(grid);
 
-            Boolean result = gameEnded.IsGameFinished();
+            Boolean result = gameEnded.IsThereAWinner();
             Assert.True(result);
         }
 
@@ -38,7 +38,7 @@ namespace TicTacToeTests
             grid.TakeCell(new int[2]{2,0});
             GameEnded gameEnded = new GameEnded(grid);
 
-            Boolean result = gameEnded.IsGameFinished();
+            Boolean result = gameEnded.IsThereAWinner();
             Assert.False(result);
         }
 
@@ -53,7 +53,7 @@ namespace TicTacToeTests
             grid.TakeCell(new int[2]{0,2});
             GameEnded gameEnded = new GameEnded(grid);
 
-            Boolean result = gameEnded.IsGameFinished();
+            Boolean result = gameEnded.IsThereAWinner();
             Assert.True(result);
         }
     }
