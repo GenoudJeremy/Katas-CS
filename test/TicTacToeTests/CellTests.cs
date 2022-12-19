@@ -8,7 +8,7 @@ public class CellTests
         TokenCell cell = new TokenCell();
 
         var result = cell.GetToken();
-        Assert.Equal(null, result);
+        Assert.Null(result);
     }
 
     [Fact]

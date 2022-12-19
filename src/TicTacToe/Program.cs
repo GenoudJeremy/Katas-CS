@@ -28,7 +28,7 @@ namespace TicTacToe
 
                             winner = grid.GetToken();
                             grid.TakeCell(new int[2] {x, y});
-                        } catch(FormatException e) {
+                        } catch(FormatException) {
                             Console.WriteLine("Please provide a valid format.");
                         }
                     } else {
@@ -44,6 +44,7 @@ namespace TicTacToe
                 
                 Console.WriteLine($"Winner is : {winner}");
             }
+            Console.WriteLine($"Game over");
         }
 
         static void ConsoleWriteGrid(Grid grid){
